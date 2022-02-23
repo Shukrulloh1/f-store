@@ -5,6 +5,7 @@ from config import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('blog/', include('blog.urls', namespace='blogs')),
     path('', include('pages.urls', namespace='pages'))
 ]
 
