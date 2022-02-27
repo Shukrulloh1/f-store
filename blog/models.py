@@ -40,7 +40,7 @@ class BlogPostModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('created at'), blank=True, null=True)
 
     def __str__(self):
-        return '{} {}'.format(self.title[:100])
+        return '{}'.format(self.title[:100])
 
     class Meta:
         verbose_name = _('blog')
