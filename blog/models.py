@@ -58,11 +58,11 @@ class CommentModel(models.Model):
     email = models.EmailField(verbose_name=_('email'))
     phone = models.CharField(max_length=13, verbose_name=_('phone'))
     comment = models.TextField(verbose_name=_('comment'))
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('created_at'), blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('created at'))
 
     class Meta:
-        verbose_name = _('comment')
-        verbose_name_plural = _('comments')
+        verbose_name = 'comment'
+        verbose_name_plural = 'comments'
 
     def __str__(self):
         return self.name
