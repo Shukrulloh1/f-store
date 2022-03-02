@@ -44,4 +44,21 @@
     </section>
     <!-- Blog Section End -->
 
+    {#    Pagination section begin #}
+    {% if page_obj.paginator.count >= 9 %}
+        <section class="container pb-4 mb-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product__pagination">
+                        {% for page in page_obj.paginator.page_range %}
+                            <a {% if page == page_obj.number %}class="active"{% endif %}
+                               href="?page={{ page }}">{{ page }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+    {#    Pagination section end #}
+
 {% endblock %}
